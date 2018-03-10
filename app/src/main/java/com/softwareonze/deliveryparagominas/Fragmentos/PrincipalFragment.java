@@ -1,20 +1,22 @@
-package com.softwareonze.deliveryparagominas;
+package com.softwareonze.deliveryparagominas.Fragmentos;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageButton;
+
+import com.softwareonze.deliveryparagominas.Activitys.ToddysActivity;
+import com.softwareonze.deliveryparagominas.R;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class PrincipalFragment extends Fragment {
-
-    private TextView texto;
 
     public PrincipalFragment() {
         // Required empty public constructor
@@ -27,9 +29,13 @@ public class PrincipalFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_principal, container, false);
 
-        texto = view.findViewById(R.id.tela_principal);
-        texto.setText("Tela principal alteranda");
+        ImageButton ib = view.findViewById(R.id.img_bt_princ_toddes);
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ToddysActivity.class));
+            }
+        });
         return view;
     }
-
 }

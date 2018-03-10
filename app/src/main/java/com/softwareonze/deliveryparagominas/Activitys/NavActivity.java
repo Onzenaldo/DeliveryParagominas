@@ -1,6 +1,5 @@
-package com.softwareonze.deliveryparagominas;
+package com.softwareonze.deliveryparagominas.Activitys;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +15,10 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.softwareonze.deliveryparagominas.Fragmentos.PratosFragment;
+import com.softwareonze.deliveryparagominas.Fragmentos.PrincipalFragment;
+import com.softwareonze.deliveryparagominas.ModeloInterno.PromocoesFragment;
+import com.softwareonze.deliveryparagominas.R;
 
 public class NavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback {
@@ -29,7 +32,7 @@ public class NavActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -62,7 +65,7 @@ public class NavActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -75,7 +78,7 @@ public class NavActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     private void showFragment(Fragment fragment, String name){
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -101,12 +104,7 @@ public class NavActivity extends AppCompatActivity
                 break;
 
             case R.id.pomocoes:
-
-                break;
-
-            case R.id.local:
-                showFragment(new MapsFragment(), "Mapa");
-
+                showFragment(new PromocoesFragment(), "Promoções");
                 break;
 
             case R.id.carrinho:

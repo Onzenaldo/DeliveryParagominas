@@ -1,16 +1,51 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCCCCC"
-    tools:context="com.softwareonze.deliveryparagominas.PrincipalFragment">
+    tools:context="com.softwareonze.deliveryparagominas.Fragmentos.PrincipalFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-
-    <TextView
-        android:id="@+id/tela_principal"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tela Principal" />
-</FrameLayout>
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/img_bt_princ_toddes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:onClick="toddes"
+            app:srcCompat="@drawable/toddeslogo" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:onClick="pizzaria2"
+            app:srcCompat="@drawable/pizzaria4" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:onClick="pizzaria3"
+            app:srcCompat="@drawable/pizzaria3" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:onClick="pizzaria4"
+            app:srcCompat="@drawable/pizzaria2" />
+
+    </LinearLayout>
+
+</ScrollView>
+

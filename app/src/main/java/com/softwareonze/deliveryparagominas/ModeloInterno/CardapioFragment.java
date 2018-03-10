@@ -1,4 +1,4 @@
-package com.softwareonze.deliveryparagominas;
+package com.softwareonze.deliveryparagominas.ModeloInterno;
 
 
 import android.os.Bundle;
@@ -6,17 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+import com.softwareonze.deliveryparagominas.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PratosFragment extends Fragment {
+public class CardapioFragment extends Fragment {
 
-    private TextView texto;
 
-    public PratosFragment() {
+    public CardapioFragment() {
         // Required empty public constructor
     }
 
@@ -25,11 +24,9 @@ public class PratosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_pratos, container, false);
+        return inflater.inflate(R.layout.fragment_cardapio, container, false);
 
-        texto = view.findViewById(R.id.tela_pratos);
-        texto.setText("Tela pratos alteranda");
-        return view;
+
     }
 
 }
