@@ -12,7 +12,7 @@ import com.softwareonze.deliveryparagominas.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SobreFragment extends Fragment {
+public class CarrinhoFragment extends Fragment {
 
 
 

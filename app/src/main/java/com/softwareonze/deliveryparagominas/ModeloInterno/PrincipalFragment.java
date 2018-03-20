@@ -1,4 +1,4 @@
-package com.softwareonze.deliveryparagominas.Fragmentos;
+package com.softwareonze.deliveryparagominas.ModeloInterno;
 
 
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.softwareonze.deliveryparagominas.Activitys.ToddysActivity;
+import com.softwareonze.deliveryparagominas.Activitys.ToddesActivity;
 import com.softwareonze.deliveryparagominas.R;
 
 
@@ -33,7 +33,7 @@ public class PrincipalFragment extends Fragment {
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), ToddysActivity.class));
+                startActivity(new Intent(getActivity(), ToddesActivity.class));
             }
         });
         return view;

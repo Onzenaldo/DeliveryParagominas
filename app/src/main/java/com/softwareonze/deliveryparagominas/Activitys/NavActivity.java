@@ -15,8 +15,8 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.softwareonze.deliveryparagominas.Fragmentos.PratosFragment;
-import com.softwareonze.deliveryparagominas.Fragmentos.PrincipalFragment;
+import com.softwareonze.deliveryparagominas.ModeloInterno.PrincipalFragment;
+import com.softwareonze.deliveryparagominas.ModeloInterno.CarrinhoFragment;
 import com.softwareonze.deliveryparagominas.ModeloInterno.PromocoesFragment;
 import com.softwareonze.deliveryparagominas.R;
 
@@ -98,17 +98,12 @@ public class NavActivity extends AppCompatActivity
 
                 break;
 
-            case R.id.pratos:
-                showFragment(new PratosFragment(), "Pratos");
-
-                break;
-
             case R.id.pomocoes:
                 showFragment(new PromocoesFragment(), "Promoções");
                 break;
 
             case R.id.carrinho:
-
+                showFragment(new CarrinhoFragment(), "Carrinho");
                 break;
 
             case R.id.nav_share:
